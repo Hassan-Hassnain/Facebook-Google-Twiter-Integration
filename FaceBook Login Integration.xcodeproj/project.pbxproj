@@ -13,9 +13,11 @@
 		3CC5237923AFDF3000B237F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC5237723AFDF3000B237F1 /* Main.storyboard */; };
 		3CC5237B23AFDF3600B237F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC5237A23AFDF3600B237F1 /* Assets.xcassets */; };
 		3CC5237E23AFDF3600B237F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC5237C23AFDF3600B237F1 /* LaunchScreen.storyboard */; };
+		F62A5CAE0EB8AB6D405B88EC /* Pods_FaceBook_Login_Integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8613D918A6A78B643CB7610 /* Pods_FaceBook_Login_Integration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3542F43019FDFCE27BCA52BD /* Pods-FaceBook Login Integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBook Login Integration.debug.xcconfig"; path = "Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration.debug.xcconfig"; sourceTree = "<group>"; };
 		3CC5236E23AFDF3000B237F1 /* FaceBook Login Integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceBook Login Integration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC5237123AFDF3000B237F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CC5237323AFDF3000B237F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		3CC5237A23AFDF3600B237F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CC5237D23AFDF3600B237F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CC5237F23AFDF3600B237F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9770779496B53D387729400F /* Pods-FaceBook Login Integration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBook Login Integration.release.xcconfig"; path = "Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration.release.xcconfig"; sourceTree = "<group>"; };
+		B8613D918A6A78B643CB7610 /* Pods_FaceBook_Login_Integration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceBook_Login_Integration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F62A5CAE0EB8AB6D405B88EC /* Pods_FaceBook_Login_Integration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CB628C795B1028B754DDCF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3542F43019FDFCE27BCA52BD /* Pods-FaceBook Login Integration.debug.xcconfig */,
+				9770779496B53D387729400F /* Pods-FaceBook Login Integration.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3CC5236523AFDF2F00B237F1 = {
 			isa = PBXGroup;
 			children = (
 				3CC5237023AFDF3000B237F1 /* FaceBook Login Integration */,
 				3CC5236F23AFDF3000B237F1 /* Products */,
+				1CB628C795B1028B754DDCF7 /* Pods */,
+				EE983C34739DE595D995CA56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = "FaceBook Login Integration";
 			sourceTree = "<group>";
 		};
+		EE983C34739DE595D995CA56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8613D918A6A78B643CB7610 /* Pods_FaceBook_Login_Integration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CC5238223AFDF3600B237F1 /* Build configuration list for PBXNativeTarget "FaceBook Login Integration" */;
 			buildPhases = (
+				DD4E061B9745FFD976A5BECA /* [CP] Check Pods Manifest.lock */,
 				3CC5236A23AFDF3000B237F1 /* Sources */,
 				3CC5236B23AFDF3000B237F1 /* Frameworks */,
 				3CC5236C23AFDF3000B237F1 /* Resources */,
+				B56BBBC8FF8D340A2CD23FD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B56BBBC8FF8D340A2CD23FD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD4E061B9745FFD976A5BECA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceBook Login Integration-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CC5236A23AFDF3000B237F1 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		3CC5238323AFDF3600B237F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3542F43019FDFCE27BCA52BD /* Pods-FaceBook Login Integration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		3CC5238423AFDF3600B237F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9770779496B53D387729400F /* Pods-FaceBook Login Integration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

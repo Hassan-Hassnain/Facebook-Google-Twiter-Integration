@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		3CC5237923AFDF3000B237F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC5237723AFDF3000B237F1 /* Main.storyboard */; };
 		3CC5237B23AFDF3600B237F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC5237A23AFDF3600B237F1 /* Assets.xcassets */; };
 		3CC5237E23AFDF3600B237F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC5237C23AFDF3600B237F1 /* LaunchScreen.storyboard */; };
+		3CC5238823B00A7F00B237F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5238723B00A7F00B237F1 /* User.swift */; };
 		F62A5CAE0EB8AB6D405B88EC /* Pods_FaceBook_Login_Integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8613D918A6A78B643CB7610 /* Pods_FaceBook_Login_Integration.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		3CC5237A23AFDF3600B237F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CC5237D23AFDF3600B237F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CC5237F23AFDF3600B237F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC5238723B00A7F00B237F1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9770779496B53D387729400F /* Pods-FaceBook Login Integration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBook Login Integration.release.xcconfig"; path = "Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration.release.xcconfig"; sourceTree = "<group>"; };
 		B8613D918A6A78B643CB7610 /* Pods_FaceBook_Login_Integration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceBook_Login_Integration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -48,7 +50,6 @@
 				3542F43019FDFCE27BCA52BD /* Pods-FaceBook Login Integration.debug.xcconfig */,
 				9770779496B53D387729400F /* Pods-FaceBook Login Integration.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +74,32 @@
 		3CC5237023AFDF3000B237F1 /* FaceBook Login Integration */ = {
 			isa = PBXGroup;
 			children = (
+				3CC5238623B00A5300B237F1 /* Model */,
 				3CC5237123AFDF3000B237F1 /* AppDelegate.swift */,
 				3CC5237323AFDF3000B237F1 /* SceneDelegate.swift */,
-				3CC5237523AFDF3000B237F1 /* ViewController.swift */,
+				3CC5238523B00A3900B237F1 /* Controller */,
 				3CC5237723AFDF3000B237F1 /* Main.storyboard */,
 				3CC5237A23AFDF3600B237F1 /* Assets.xcassets */,
 				3CC5237C23AFDF3600B237F1 /* LaunchScreen.storyboard */,
 				3CC5237F23AFDF3600B237F1 /* Info.plist */,
 			);
 			path = "FaceBook Login Integration";
+			sourceTree = "<group>";
+		};
+		3CC5238523B00A3900B237F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3CC5237523AFDF3000B237F1 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3CC5238623B00A5300B237F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CC5238723B00A7F00B237F1 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EE983C34739DE595D995CA56 /* Frameworks */ = {
@@ -207,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC5238823B00A7F00B237F1 /* User.swift in Sources */,
 				3CC5237623AFDF3000B237F1 /* ViewController.swift in Sources */,
 				3CC5237223AFDF3000B237F1 /* AppDelegate.swift in Sources */,
 				3CC5237423AFDF3000B237F1 /* SceneDelegate.swift in Sources */,

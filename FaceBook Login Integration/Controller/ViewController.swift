@@ -36,7 +36,6 @@ class ViewController: UIViewController {
                 
             }
         }
-        self.p()
         
     }
 
@@ -56,16 +55,14 @@ class ViewController: UIViewController {
             {
                 User.id = fbId
                 User.email = email
-               // User.name = name
-                    print(fbId)
-                print(email)
+
+                self.p()
             } else {
                 print("Data fetching fail")
             }
 
         }
         connection.start()
-        p()
     }
     
     
@@ -77,4 +74,5 @@ class ViewController: UIViewController {
     }
     
 }
+
 

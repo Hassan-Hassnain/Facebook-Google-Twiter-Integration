@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 class User {
     static var id: String = "-"
     static var email: String = "-"
     static var name: String = "-"
+    static var picture: UIImage?
 }

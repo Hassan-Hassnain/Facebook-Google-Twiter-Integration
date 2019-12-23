@@ -15,4 +15,7 @@ target 'FaceBook Login Integration' do
     pod 'FacebookLogin'
     pod 'FacebookShare'
     
+    
+    pod 'GoogleSignIn'
+    
 end

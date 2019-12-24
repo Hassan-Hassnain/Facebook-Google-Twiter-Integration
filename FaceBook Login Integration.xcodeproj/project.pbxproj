@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3C3EBAFA23B0DBEE00E7C09F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBAF923B0DBEE00E7C09F /* Constants.swift */; };
 		3C3EBAFC23B10BF900E7C09F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBAFB23B10BF900E7C09F /* ProfileViewController.swift */; };
+		3C92402A23B142BF00AD8D04 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C92402923B142BE00AD8D04 /* credentials.plist */; };
+		3C92402C23B146E700AD8D04 /* DropSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92402B23B146E700AD8D04 /* DropSegue.swift */; };
+		3C92402F23B1470400AD8D04 /* Custom-ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92402D23B1470400AD8D04 /* Custom-ImageView.swift */; };
+		3C92403023B1470400AD8D04 /* Custom-Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92402E23B1470400AD8D04 /* Custom-Button.swift */; };
 		3CC5237223AFDF3000B237F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5237123AFDF3000B237F1 /* AppDelegate.swift */; };
 		3CC5237423AFDF3000B237F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5237323AFDF3000B237F1 /* SceneDelegate.swift */; };
 		3CC5237623AFDF3000B237F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC5237523AFDF3000B237F1 /* ViewController.swift */; };
@@ -23,6 +27,10 @@
 		3542F43019FDFCE27BCA52BD /* Pods-FaceBook Login Integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBook Login Integration.debug.xcconfig"; path = "Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration.debug.xcconfig"; sourceTree = "<group>"; };
 		3C3EBAF923B0DBEE00E7C09F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3C3EBAFB23B10BF900E7C09F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3C92402923B142BE00AD8D04 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		3C92402B23B146E700AD8D04 /* DropSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropSegue.swift; sourceTree = "<group>"; };
+		3C92402D23B1470400AD8D04 /* Custom-ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Custom-ImageView.swift"; sourceTree = "<group>"; };
+		3C92402E23B1470400AD8D04 /* Custom-Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Custom-Button.swift"; sourceTree = "<group>"; };
 		3CC5236E23AFDF3000B237F1 /* FaceBook Login Integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceBook Login Integration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC5237123AFDF3000B237F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CC5237323AFDF3000B237F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3C92403123B1470D00AD8D04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C92402B23B146E700AD8D04 /* DropSegue.swift */,
+				3C92402E23B1470400AD8D04 /* Custom-Button.swift */,
+				3C92402D23B1470400AD8D04 /* Custom-ImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3CC5236523AFDF2F00B237F1 = {
 			isa = PBXGroup;
 			children = (
@@ -78,14 +96,16 @@
 		3CC5237023AFDF3000B237F1 /* FaceBook Login Integration */ = {
 			isa = PBXGroup;
 			children = (
-				3CC5238623B00A5300B237F1 /* Model */,
 				3CC5237123AFDF3000B237F1 /* AppDelegate.swift */,
 				3CC5237323AFDF3000B237F1 /* SceneDelegate.swift */,
+				3CC5238623B00A5300B237F1 /* Model */,
+				3C92403123B1470D00AD8D04 /* View */,
 				3CC5238523B00A3900B237F1 /* Controller */,
 				3CC5237723AFDF3000B237F1 /* Main.storyboard */,
 				3CC5237A23AFDF3600B237F1 /* Assets.xcassets */,
 				3CC5237C23AFDF3600B237F1 /* LaunchScreen.storyboard */,
 				3CC5237F23AFDF3600B237F1 /* Info.plist */,
+				3C92402923B142BE00AD8D04 /* credentials.plist */,
 			);
 			path = "FaceBook Login Integration";
 			sourceTree = "<group>";
@@ -128,6 +148,7 @@
 				3CC5236B23AFDF3000B237F1 /* Frameworks */,
 				3CC5236C23AFDF3000B237F1 /* Resources */,
 				B56BBBC8FF8D340A2CD23FD5 /* [CP] Embed Pods Frameworks */,
+				5E78EDFCBDC5E2DC0B966956 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CC5237E23AFDF3600B237F1 /* LaunchScreen.storyboard in Resources */,
+				3C92402A23B142BF00AD8D04 /* credentials.plist in Resources */,
 				3CC5237B23AFDF3600B237F1 /* Assets.xcassets in Resources */,
 				3CC5237923AFDF3000B237F1 /* Main.storyboard in Resources */,
 			);
@@ -185,6 +207,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5E78EDFCBDC5E2DC0B966956 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B56BBBC8FF8D340A2CD23FD5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,9 +273,12 @@
 				3C3EBAFC23B10BF900E7C09F /* ProfileViewController.swift in Sources */,
 				3C3EBAFA23B0DBEE00E7C09F /* Constants.swift in Sources */,
 				3CC5238823B00A7F00B237F1 /* User.swift in Sources */,
+				3C92403023B1470400AD8D04 /* Custom-Button.swift in Sources */,
+				3C92402C23B146E700AD8D04 /* DropSegue.swift in Sources */,
 				3CC5237623AFDF3000B237F1 /* ViewController.swift in Sources */,
 				3CC5237223AFDF3000B237F1 /* AppDelegate.swift in Sources */,
 				3CC5237423AFDF3000B237F1 /* SceneDelegate.swift in Sources */,
+				3C92402F23B1470400AD8D04 /* Custom-ImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

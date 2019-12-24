@@ -8,26 +8,35 @@
 
 import UIKit
 import FacebookLogin
+import GoogleSignIn
+
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileNaem: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         profileNaem.text = User.name
         profileImage.image = User.picture
         
     }
     @IBAction func backButton(_ sender: UIButton) {
         
-        self.dismiss(animated: true, completion: nil)
-        
+        GIDSignIn.sharedInstance()?.signOut()
         let manager = LoginManager()
         manager.logOut()
+        self.dismiss(animated: true, completion: nil)
+        
         
     }
-     
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+              withError error: Error!) {
+        
+        print("User Disconnected")
+        
+    }
 }

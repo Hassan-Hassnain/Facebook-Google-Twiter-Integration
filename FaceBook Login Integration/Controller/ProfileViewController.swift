@@ -20,7 +20,12 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         profileNaem.text = User.name
-        profileImage.image = User.picture
+        if let image = User.picture {
+            profileImage.image = image
+        }else {
+            print(" User.picture is nil")
+        }
+        
         
     }
     @IBAction func backButton(_ sender: UIButton) {

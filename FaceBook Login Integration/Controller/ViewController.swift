@@ -15,6 +15,7 @@ class ViewController: UIViewController{
     
     
     @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,12 +62,12 @@ extension ViewController: GIDSignInDelegate {
             return
         }
         // Perform any operations on signed in user here.
-//        let userId = user.userID                  // For client-side use only!
-//        let idToken = user.authentication.idToken // Safe to send to the server
+        //        let userId = user.userID                  // For client-side use only!
+        //        let idToken = user.authentication.idToken // Safe to send to the server
         let fullName = user.profile.name
-//        let givenName = user.profile.givenName
-//        let familyName = user.profile.familyName
-//        let email = user.profile.email
+        //        let givenName = user.profile.givenName
+        //        let familyName = user.profile.familyName
+        //        let email = user.profile.email
         // ...
         if let fullName = fullName{
             User.name = fullName
@@ -74,12 +75,16 @@ extension ViewController: GIDSignInDelegate {
         
         print("Downloading image")
         
- 
-        if let url = user.profile.imageURL(withDimension: 120){
+        
+        if let url = user.profile.imageURL(withDimension: 250){
             print(url)
             UIImage.loadFrom(url: url) { image in
-                User.picture = image
-                print("Image downloaded")
+                if let image = image {
+                    User.picture = image
+                    print("Image downloaded")
+                    print(User.picture)
+                    self.imageView.image = User.picture!
+                }
             }
         } else {
             print("Image download failed")

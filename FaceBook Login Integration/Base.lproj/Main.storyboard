@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,8 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-RO-nKP" customClass="CustomButton" customModule="FaceBook_Login_Integration" customModuleProvider="target">
-                                <rect key="frame" x="95" y="257" width="224" height="45"/>
+                                <rect key="frame" x="41.5" y="414" width="331" height="50"/>
                                 <color key="backgroundColor" red="0.63160222768783569" green="0.91684526205062866" blue="0.57743781805038452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OwX-nG-6dm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="tintColor" red="0.13350942730000001" green="0.29707628489999999" blue="0.32067108150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Facebook Login">
@@ -35,11 +39,11 @@
                                     <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhK-mH-oGy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUT-Gm-91U" customClass="CustomButton" customModule="FaceBook_Login_Integration" customModuleProvider="target">
-                                <rect key="frame" x="95" y="343" width="224" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUT-Gm-91U" customClass="CustomButton" customModule="FaceBook_Login_Integration" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="544" width="331" height="50"/>
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="n03-Ke-Er0"/>
+                                    <constraint firstAttribute="height" constant="50" id="8M9-ya-1tK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Google Login">
@@ -57,26 +61,35 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ilt-X3-ArH">
-                                <rect key="frame" x="82" y="503" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ilt-X3-ArH" customClass="Custom_ImageView" customModule="FaceBook_Login_Integration" customModuleProvider="target">
+                                <rect key="frame" x="82" y="84" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Ahd-3S-l6r"/>
-                                    <constraint firstAttribute="width" constant="250" id="GTR-tC-uzC"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="JBD-Kl-CUJ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="tqp-Gt-Mrb"/>
+                                    <constraint firstAttribute="height" constant="250" id="E8p-eO-eIZ"/>
+                                    <constraint firstAttribute="width" constant="250" id="O1k-xM-tS7"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.26685573629999998" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="aQy-RO-nKP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.543478" constant="-1" id="104-Fd-Puw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IUT-Gm-91U" secondAttribute="trailing" symbolic="YES" id="FEk-hE-2fV"/>
-                            <constraint firstItem="aQy-RO-nKP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="213" id="I47-SN-7gi"/>
-                            <constraint firstItem="IUT-Gm-91U" firstAttribute="top" secondItem="aQy-RO-nKP" secondAttribute="bottom" constant="41" id="LSZ-P7-JAy"/>
-                            <constraint firstItem="aQy-RO-nKP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Otv-Nm-rD4"/>
-                            <constraint firstItem="IUT-Gm-91U" firstAttribute="leading" secondItem="aQy-RO-nKP" secondAttribute="leading" id="nF4-nm-8nY"/>
-                            <constraint firstItem="Ilt-X3-ArH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sq8-dm-9Ms"/>
-                            <constraint firstItem="Ilt-X3-ArH" firstAttribute="top" secondItem="IUT-Gm-91U" secondAttribute="bottom" constant="118" id="tFX-en-iqX"/>
+                            <constraint firstItem="Ilt-X3-ArH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="CLR-5j-FpY"/>
+                            <constraint firstItem="aQy-RO-nKP" firstAttribute="top" secondItem="Ilt-X3-ArH" secondAttribute="bottom" constant="80" id="GPu-1Y-5wI"/>
+                            <constraint firstItem="Ilt-X3-ArH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iof-PM-y3A"/>
+                            <constraint firstItem="IUT-Gm-91U" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="LuU-En-WLE"/>
+                            <constraint firstItem="IUT-Gm-91U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VFj-gN-aBo"/>
+                            <constraint firstItem="aQy-RO-nKP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="WWb-Es-kTd"/>
+                            <constraint firstItem="aQy-RO-nKP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iVN-Wb-Hak"/>
+                            <constraint firstItem="IUT-Gm-91U" firstAttribute="top" secondItem="aQy-RO-nKP" secondAttribute="bottom" constant="80" id="pj4-Rm-YaK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -99,40 +112,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-Zu-IPb">
-                                <rect key="frame" x="20" y="20" width="22" height="22"/>
+                                <rect key="frame" x="20" y="20" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="Iym-iq-bAp"/>
-                                    <constraint firstAttribute="height" constant="22" id="qRf-AK-R8X"/>
+                                    <constraint firstAttribute="height" constant="70" id="2BA-XA-pPf"/>
+                                    <constraint firstAttribute="width" constant="70" id="qC1-pe-Xpt"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="arrow.left.circle" catalog="system"/>
+                                <state key="normal" title="Button" image="Back Button"/>
                                 <connections>
                                     <action selector="backButton:" destination="hsC-O3-Rx0" eventType="touchUpInside" id="4mK-Y6-DfD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7O-ii-dje">
-                                <rect key="frame" x="20" y="365" width="374" height="39.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <rect key="frame" x="41.5" y="518" width="331" height="32"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hE6-6r-u2Z">
-                                <rect key="frame" x="82" y="81" width="250" height="251"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hE6-6r-u2Z" customClass="Custom_ImageView" customModule="FaceBook_Login_Integration" customModuleProvider="target">
+                                <rect key="frame" x="82" y="168" width="250" height="250"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="cT6-qD-aOY"/>
-                                    <constraint firstAttribute="height" constant="250" id="xj5-g3-9ct"/>
+                                    <constraint firstAttribute="width" constant="250" id="Mom-eC-pmw"/>
+                                    <constraint firstAttribute="height" constant="250" id="OLG-Kc-xw9"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="R7O-ii-dje" firstAttribute="leading" secondItem="D0S-Ra-EnR" secondAttribute="leading" constant="20" id="6Sx-Im-K6Q"/>
-                            <constraint firstItem="R7O-ii-dje" firstAttribute="top" secondItem="hE6-6r-u2Z" secondAttribute="bottom" constant="33" id="GEh-JI-iWo"/>
-                            <constraint firstItem="D0S-Ra-EnR" firstAttribute="trailing" secondItem="R7O-ii-dje" secondAttribute="trailing" constant="20" id="Qvv-Hs-d0P"/>
-                            <constraint firstItem="hNg-Zu-IPb" firstAttribute="top" secondItem="D0S-Ra-EnR" secondAttribute="top" constant="20" id="Y8g-F6-ewg"/>
-                            <constraint firstItem="hE6-6r-u2Z" firstAttribute="leading" secondItem="D0S-Ra-EnR" secondAttribute="leading" constant="82" id="a9B-Ey-xQi"/>
-                            <constraint firstItem="hNg-Zu-IPb" firstAttribute="leading" secondItem="D0S-Ra-EnR" secondAttribute="leading" constant="20" id="adQ-FO-mWW"/>
-                            <constraint firstItem="hE6-6r-u2Z" firstAttribute="top" secondItem="D0S-Ra-EnR" secondAttribute="top" constant="82" id="g9p-Vl-XHs"/>
-                            <constraint firstItem="D0S-Ra-EnR" firstAttribute="trailing" secondItem="hE6-6r-u2Z" secondAttribute="trailing" constant="82" id="vCy-7l-KKm"/>
+                            <constraint firstItem="R7O-ii-dje" firstAttribute="centerX" secondItem="CLi-9D-fvt" secondAttribute="centerX" id="06a-BF-q6a"/>
+                            <constraint firstItem="hNg-Zu-IPb" firstAttribute="leading" secondItem="D0S-Ra-EnR" secondAttribute="leading" constant="20" id="5cG-AI-jSr"/>
+                            <constraint firstItem="R7O-ii-dje" firstAttribute="width" secondItem="CLi-9D-fvt" secondAttribute="width" multiplier="0.8" id="ABk-7j-0P5"/>
+                            <constraint firstItem="R7O-ii-dje" firstAttribute="top" secondItem="hE6-6r-u2Z" secondAttribute="bottom" constant="100" id="Prc-2O-aCT"/>
+                            <constraint firstItem="hE6-6r-u2Z" firstAttribute="centerX" secondItem="CLi-9D-fvt" secondAttribute="centerX" id="Qlu-yh-COz"/>
+                            <constraint firstItem="hNg-Zu-IPb" firstAttribute="top" secondItem="D0S-Ra-EnR" secondAttribute="top" constant="20" id="Uuj-5b-MG4"/>
+                            <constraint firstItem="hE6-6r-u2Z" firstAttribute="top" secondItem="hNg-Zu-IPb" secondAttribute="bottom" constant="78" id="zFX-fW-cJf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D0S-Ra-EnR"/>
                     </view>
@@ -148,7 +169,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left.circle" catalog="system" width="64" height="60"/>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="Back Button" width="200" height="200"/>
     </resources>
 </document>

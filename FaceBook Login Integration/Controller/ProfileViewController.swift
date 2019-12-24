@@ -30,7 +30,6 @@ class ProfileViewController: UIViewController {
         manager.logOut()
         self.dismiss(animated: true, completion: nil)
         
-        print(profileImage.image?.size)
         
     }
    

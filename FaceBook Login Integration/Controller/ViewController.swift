@@ -17,11 +17,13 @@ class ViewController: UIViewController{
     @IBOutlet weak var googleLoginButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
+    var image = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         googleLoginButton.addTarget(self, action: #selector(singInUsingGoogle(_:)), for: .touchUpInside)
-        //printProfile()
+        
     }
     
     @IBAction func loginWithFacebook(_ sender: Any){
@@ -42,6 +44,8 @@ class ViewController: UIViewController{
         print(User.email)
         print(User.name)
     }
+    
+
     
 }
 
@@ -76,24 +80,14 @@ extension ViewController: GIDSignInDelegate {
         print("Downloading image")
         
         
-        if let url = user.profile.imageURL(withDimension: 250){
-            print(url)
-            UIImage.loadFrom(url: url) { image in
-                if let image = image {
-                    User.picture = image
-                    print("Image downloaded")
-                    print(User.picture)
-                    self.imageView.image = User.picture!
-                }
-            }
-        } else {
-            print("Image download failed")
-        }
+         let url = user.profile.imageURL(withDimension: 250)
         
-        print("did Sign in for user")
+            self.downloadImage(from: url!)
+        imageView.image = User.picture
+        
         performSegue(withIdentifier: "ProfileView", sender: self)
     }
-    
+   
 }
 
 
@@ -131,7 +125,14 @@ extension ViewController {
                 print("Login failed with error = \(error.localizedDescription)")
                 break
             case .success( _, _, _):
-                self.FacebookLoginSuccessful()            }
+                
+                
+                print("Access token = \(AccessToken.self)")
+                self.printProfile()
+                
+                self.performSegue(withIdentifier: "ProfileView", sender: self)
+                
+            }
         }
     }
     
@@ -154,18 +155,10 @@ extension ViewController {
                                             User.id = fbId
                                             User.email = email
                                             User.name = name
-                                            
-                                            print(fbId)
-                                            if fbId != "" {
-                                                let url = URL(string: "https://graph.facebook.com/\(fbId)/picture?type=large")
-                                                self.downloadImage(from: url!)
-                                                
-                                            } else {
-                                                
-                                            }
-                                            //  https://graph.facebook.com/3883473975011742/picture?type=large
-                                            
-                                            //self.printProfile()
+                                            let url = URL(string: "https://graph.facebook.com/\(fbId)/picture?type=large")
+                                            self.downloadImage(from: url!)
+                                            self.imageView.image = User.picture
+//  https://graph.facebook.com/3883473975011742/picture?type=large
                                         } else {
                                             print("Data fetching fail")
                                         }
@@ -196,6 +189,9 @@ extension ViewController {
     }
     
     func downloadImage(from url: URL) {
+        
+        var profileImage = UIImage()
+        
         print("Download Started")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
@@ -203,19 +199,18 @@ extension ViewController {
             print("Download Finished")
             DispatchQueue.main.async() {
                 
-                User.picture = UIImage(data: data)
+                profileImage = UIImage(data: data)!
                 
+                print("User.pictre = \(profileImage)")
+                User.picture = profileImage
+                self.imageView.image = profileImage
             }
         }
     }
     
-    func FacebookLoginSuccessful(){
-        print("Access token = \(AccessToken.self)")
-        self.printProfile()
-        
-        self.performSegue(withIdentifier: "ProfileView", sender: self)
-    }
+    
     
 }
+
 
 

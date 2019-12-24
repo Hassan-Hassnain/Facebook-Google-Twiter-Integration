@@ -35,10 +35,12 @@
                                     <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhK-mH-oGy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUT-Gm-91U" customClass="CustomButton" customModule="FaceBook_Login_Integration" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUT-Gm-91U" customClass="CustomButton" customModule="FaceBook_Login_Integration" customModuleProvider="target">
                                 <rect key="frame" x="95" y="343" width="224" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="n03-Ke-Er0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Google Login">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,17 +57,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ilt-X3-ArH">
+                                <rect key="frame" x="82" y="503" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Ahd-3S-l6r"/>
+                                    <constraint firstAttribute="width" constant="250" id="GTR-tC-uzC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="JBD-Kl-CUJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="tqp-Gt-Mrb"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aQy-RO-nKP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.543478" constant="-1" id="104-Fd-Puw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IUT-Gm-91U" secondAttribute="trailing" symbolic="YES" id="FEk-hE-2fV"/>
                             <constraint firstItem="aQy-RO-nKP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="213" id="I47-SN-7gi"/>
+                            <constraint firstItem="IUT-Gm-91U" firstAttribute="top" secondItem="aQy-RO-nKP" secondAttribute="bottom" constant="41" id="LSZ-P7-JAy"/>
                             <constraint firstItem="aQy-RO-nKP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Otv-Nm-rD4"/>
+                            <constraint firstItem="IUT-Gm-91U" firstAttribute="leading" secondItem="aQy-RO-nKP" secondAttribute="leading" id="nF4-nm-8nY"/>
+                            <constraint firstItem="Ilt-X3-ArH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sq8-dm-9Ms"/>
+                            <constraint firstItem="Ilt-X3-ArH" firstAttribute="top" secondItem="IUT-Gm-91U" secondAttribute="bottom" constant="118" id="tFX-en-iqX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="googleLoginButton" destination="IUT-Gm-91U" id="T8H-8Q-gI4"/>
+                        <outlet property="imageView" destination="Ilt-X3-ArH" id="llK-XW-blP"/>
                         <segue destination="hsC-O3-Rx0" kind="show" identifier="ProfileView" customClass="DropSegue" customModule="FaceBook_Login_Integration" customModuleProvider="target" id="muA-Ck-9ho"/>
                     </connections>
                 </viewController>
@@ -98,7 +115,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hE6-6r-u2Z">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hE6-6r-u2Z">
                                 <rect key="frame" x="82" y="81" width="250" height="251"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="cT6-qD-aOY"/>
@@ -132,6 +149,6 @@
     </scenes>
     <resources>
         <image name="arrow.left.circle" catalog="system" width="64" height="60"/>
-        <image name="square.and.arrow.up" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>

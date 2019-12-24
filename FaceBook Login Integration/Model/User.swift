@@ -10,16 +10,8 @@ import Foundation
 import UIKit
 
 struct User {
-    static var id: String = "-"
-    static var email: String = "-"
-    static var name: String = "-"
-    static var picture = UIImage()
-    static func restParameters (){
-    
-    id = "-"
-    email = "-"
-    name = "-"
-    picture = UIImage()
-    
-    }
+    var id: String
+    var email: String
+    var name: String
+    var pictureUrl : String
 }

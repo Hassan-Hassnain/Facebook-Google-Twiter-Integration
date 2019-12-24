@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sBf-bM-uNF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-RO-nKP" customClass="CustomButton" customModule="FaceBook_Login_Integration" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="414" width="331" height="50"/>
+                                <rect key="frame" x="41.5" y="458" width="331" height="50"/>
                                 <color key="backgroundColor" red="0.63160222768783569" green="0.91684526205062866" blue="0.57743781805038452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="OwX-nG-6dm"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUT-Gm-91U" customClass="CustomButton" customModule="FaceBook_Login_Integration" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="544" width="331" height="50"/>
+                                <rect key="frame" x="41.5" y="588" width="331" height="50"/>
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8M9-ya-1tK"/>
@@ -64,8 +64,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ilt-X3-ArH" customClass="Custom_ImageView" customModule="FaceBook_Login_Integration" customModuleProvider="target">
-                                <rect key="frame" x="82" y="84" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ilt-X3-ArH" customClass="Custom_ImageView" customModule="FaceBook_Login_Integration" customModuleProvider="target">
+                                <rect key="frame" x="164" y="128" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="E8p-eO-eIZ"/>
                                     <constraint firstAttribute="width" constant="250" id="O1k-xM-tS7"/>
@@ -96,6 +96,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="e2i-y7-veJ"/>
                     <connections>
                         <outlet property="googleLoginButton" destination="IUT-Gm-91U" id="T8H-8Q-gI4"/>
                         <outlet property="imageView" destination="Ilt-X3-ArH" id="llK-XW-blP"/>
@@ -104,35 +105,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="80.357142857142847"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="80.357142857142847"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Nhq-62-nJD">
             <objects>
                 <viewController id="hsC-O3-Rx0" customClass="ProfileViewController" customModule="FaceBook_Login_Integration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CLi-9D-fvt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-Zu-IPb">
-                                <rect key="frame" x="20" y="20" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="2BA-XA-pPf"/>
-                                    <constraint firstAttribute="width" constant="70" id="qC1-pe-Xpt"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="Back Button"/>
-                                <connections>
-                                    <action selector="backButton:" destination="hsC-O3-Rx0" eventType="touchUpInside" id="4mK-Y6-DfD"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7O-ii-dje">
-                                <rect key="frame" x="41.5" y="518" width="331" height="32"/>
+                                <rect key="frame" x="41.5" y="488" width="331" height="32"/>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hE6-6r-u2Z" customClass="Custom_ImageView" customModule="FaceBook_Login_Integration" customModuleProvider="target">
-                                <rect key="frame" x="82" y="168" width="250" height="250"/>
+                                <rect key="frame" x="82" y="138" width="250" height="250"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Mom-eC-pmw"/>
@@ -151,12 +141,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="R7O-ii-dje" firstAttribute="centerX" secondItem="CLi-9D-fvt" secondAttribute="centerX" id="06a-BF-q6a"/>
-                            <constraint firstItem="hNg-Zu-IPb" firstAttribute="leading" secondItem="D0S-Ra-EnR" secondAttribute="leading" constant="20" id="5cG-AI-jSr"/>
                             <constraint firstItem="R7O-ii-dje" firstAttribute="width" secondItem="CLi-9D-fvt" secondAttribute="width" multiplier="0.8" id="ABk-7j-0P5"/>
                             <constraint firstItem="R7O-ii-dje" firstAttribute="top" secondItem="hE6-6r-u2Z" secondAttribute="bottom" constant="100" id="Prc-2O-aCT"/>
                             <constraint firstItem="hE6-6r-u2Z" firstAttribute="centerX" secondItem="CLi-9D-fvt" secondAttribute="centerX" id="Qlu-yh-COz"/>
-                            <constraint firstItem="hNg-Zu-IPb" firstAttribute="top" secondItem="D0S-Ra-EnR" secondAttribute="top" constant="20" id="Uuj-5b-MG4"/>
-                            <constraint firstItem="hE6-6r-u2Z" firstAttribute="top" secondItem="hNg-Zu-IPb" secondAttribute="bottom" constant="78" id="zFX-fW-cJf"/>
+                            <constraint firstItem="hE6-6r-u2Z" firstAttribute="top" secondItem="D0S-Ra-EnR" secondAttribute="top" constant="50" id="xDV-wC-IXe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D0S-Ra-EnR"/>
                     </view>
@@ -168,10 +156,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpQ-of-A7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844.92753623188412" y="80.357142857142847"/>
+            <point key="canvasLocation" x="1755.072463768116" y="80.357142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xbq-MC-FEI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sBf-bM-uNF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kCW-pp-7s1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Zv6-Ap-aMV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1E-5R-fom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="80.357142857142847"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Back Button" width="200" height="200"/>
-    </resources>
 </document>

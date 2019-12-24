@@ -9,18 +9,24 @@
 import UIKit
 import FacebookLogin
 import GoogleSignIn
+import SDWebImage
 
 class ProfileViewController: UIViewController {
      
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileNaem: UILabel!
     
-
+    var user :User?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profileNaem.text = User.name
-        profileImage.image = User.picture
+        if let user = self.user {
+            profileNaem.text = user.name
+            
+            if let url = URL(string: user.pictureUrl){
+                profileImage.sd_setImage(with: url, completed: nil)
+            }
+        }
     }
     
     @IBAction func backButton(_ sender: UIButton) {
@@ -28,6 +34,8 @@ class ProfileViewController: UIViewController {
         GIDSignIn.sharedInstance()?.signOut()
         let manager = LoginManager()
         manager.logOut()
+        UserDefaults.standard.set(false, forKey: "IS_LOGIN")
+
         self.dismiss(animated: true, completion: nil)
         
         

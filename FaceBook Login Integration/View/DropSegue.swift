@@ -34,7 +34,7 @@ extension DropSegue: UIViewControllerTransitioningDelegate {
 class DropPresentAnimator:NSObject, UIViewControllerAnimatedTransitioning {
   
   func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-    return 1
+    return 4
   }
   
   func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -68,6 +68,7 @@ class DropPresentAnimator:NSObject, UIViewControllerAnimatedTransitioning {
         finished in
         // 5. Clean up the transition context
         transitionContext.completeTransition(true)
+        
     })
   }
 }

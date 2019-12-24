@@ -17,5 +17,5 @@ target 'FaceBook Login Integration' do
     
     
     pod 'GoogleSignIn'
-    
+    pod 'SDWebImage'
 end

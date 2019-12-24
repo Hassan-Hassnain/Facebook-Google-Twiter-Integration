@@ -12,7 +12,7 @@ import GoogleSignIn
 import SDWebImage
 
 class ProfileViewController: UIViewController {
-     
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileNaem: UILabel!
     
@@ -22,11 +22,9 @@ class ProfileViewController: UIViewController {
         
         if let user = self.user {
             profileNaem.text = user.name
-            
-            if let url = URL(string: user.pictureUrl){
-                profileImage.sd_setImage(with: url, completed: nil)
-            }
+            profileImage.sd_setImage(with: user.pictureUrl, completed: nil)
         }
+        savedValues()
     }
     
     @IBAction func backButton(_ sender: UIButton) {
@@ -35,12 +33,23 @@ class ProfileViewController: UIViewController {
         let manager = LoginManager()
         manager.logOut()
         UserDefaults.standard.set(false, forKey: "IS_LOGIN")
-
+        
         self.dismiss(animated: true, completion: nil)
         
         
     }
-   
+    func savedValues(){
+        if let name = UserDefaults.standard.value(forKey: "NAME") as? String{
+            print(name)
+        }
+        if let imageurl = UserDefaults.standard.value(forKey: "IMAGE_URL") as? String{
+            print(imageurl)
+        }
+        
+        if let status = UserDefaults.standard.value(forKey: "IS_LOGIN") as? Bool{
+            print(status)
+        }
+    }
 }
 
 

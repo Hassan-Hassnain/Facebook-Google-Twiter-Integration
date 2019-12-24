@@ -28,14 +28,14 @@ class ViewController: UIViewController,GIDSignInDelegate{
         super.viewDidLoad()
         
         if let name = UserDefaults.standard.value(forKey: "NAME") as? String{
-            
+            print(name)
         }
         if let imageurl = UserDefaults.standard.value(forKey: "IMAGE_URL") as? String{
-            
+            print(imageurl)
         }
         
         if let status = UserDefaults.standard.value(forKey: "IS_LOGIN") as? Bool{
-            
+            print(status)
         }
         googleLoginButton.addTarget(self, action: #selector(singInUsingGoogle(_:)), for: .touchUpInside)
         
@@ -93,15 +93,16 @@ class ViewController: UIViewController,GIDSignInDelegate{
                                             let fbId: String = result["id"],
                                             let name: String = result["name"]
                                         {
-                                            let imageUrl = "https://graph.facebook.com/\(fbId)/picture?type=large"
                                             
-                                            let user = User(id: fbId, email: email, name: name, pictureUrl: imageUrl)
-                                            self.performSegue(withIdentifier: "ProfileView", sender: user)
-                                            
-                                            UserDefaults.standard.set(name, forKey: "NAME")
-                                            UserDefaults.standard.set(imageUrl, forKey: "IMAGE_URL")
-                                            UserDefaults.standard.set(true, forKey: "IS_LOGIN")
-                                            
+                                            let url = "https://graph.facebook.com/\(fbId)/picture?type=large"
+                                            if let imageUrl = URL(string: url){
+                                                let user = User(id: fbId, email: email, name: name, pictureUrl: imageUrl)
+                                                self.performSegue(withIdentifier: "ProfileView", sender: user)
+                                                
+                                                UserDefaults.standard.set(name, forKey: "NAME")
+                                                UserDefaults.standard.set(imageUrl, forKey: "IMAGE_URL")
+                                                UserDefaults.standard.set(true, forKey: "IS_LOGIN")
+                                            }
                                         } else {
                                             print("Data fetching fail")
                                         }
@@ -132,31 +133,14 @@ class ViewController: UIViewController,GIDSignInDelegate{
             }
             return
         }
-        
-      //  let url = String(describing: user.profile.imageURL(withDimension: 100))
-        var imageUrl = ""
-        
-        do {
-            let url = user.profile.imageURL(withDimension: 250)
-            let contents = try String(contentsOf: url!)
-            imageUrl = contents
-               print(contents)
-           } catch {
-               // contents could not be loaded
-           }
-        print(imageUrl)
-        
+  
         if let name = user.profile.name,
            let GId = user.userID,
-           let email = user.profile.email{
+            let email = user.profile.email,
+        let imageUrl = user.profile.imageURL(withDimension: 250){
             let user = User(id: GId, email: email, name: name, pictureUrl: imageUrl)
             self.performSegue(withIdentifier: "ProfileView", sender: user)
         }
-        
-        
-        print("Downloading image")
-        
-        
     }
     
     

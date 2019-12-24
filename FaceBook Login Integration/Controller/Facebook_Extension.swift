@@ -28,8 +28,7 @@ extension ViewController {
             case .success( _, _, _):
                                 
                 print("Access token = \(AccessToken.self)")
-                self.performSegue(withIdentifier: "ProfileView", sender: self)
-                
+                self.fetchProfileData()
             }
         }
     }
@@ -56,7 +55,6 @@ extension ViewController {
                                             let url = URL(string: "https://graph.facebook.com/\(fbId)/picture?type=large")
                                             self.downloadImage(from: url!)
                                             self.imageView.image = User.picture
-//  https://graph.facebook.com/3883473975011742/picture?type=large
                                         } else {
                                             print("Data fetching fail")
                                         }
@@ -64,27 +62,4 @@ extension ViewController {
         connection.start()
     }
     
-//    func readUserEvents() {
-//        let request = GraphRequest(graphPath: "/me/events",
-//                                   parameters: [ "fields": "data, description" ],
-//                                   httpMethod: .get)
-//        request.start { [weak self] _, result, error in
-//            //self?.presentAlertController(result: result, error: error)
-//        }
-//    }
-//
-//    func readUserFriendList() {
-//        let request = GraphRequest(graphPath: "/me/friends",
-//                                   parameters: [ "fields": "data" ],
-//                                   httpMethod: .get)
-//        request.start { [weak self] _, result, error in
-//            //self?.presentAlertController(result: result, error: error)
-//        }
-//    }
-    
-    
-    
-    
-    
 }
-

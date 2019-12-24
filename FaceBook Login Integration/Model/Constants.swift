@@ -8,7 +8,7 @@
 
 import Foundation
 
-class K {
+struct K {
     let publicProfile = "public_profile"
     let userFriends = "user_friends"
     let email = "email"

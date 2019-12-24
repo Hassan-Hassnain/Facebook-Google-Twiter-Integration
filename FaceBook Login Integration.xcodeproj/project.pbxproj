@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C111BFD23B263A600C73F1A /* Facebook Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C111BFC23B263A600C73F1A /* Facebook Extension.swift */; };
-		3C111BFF23B2657D00C73F1A /* Google Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C111BFE23B2657D00C73F1A /* Google Extension.swift */; };
-		3C111C0123B26B3000C73F1A /* Image Downloading .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C111C0023B26B3000C73F1A /* Image Downloading .swift */; };
+		3C111BFD23B263A600C73F1A /* Facebook_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C111BFC23B263A600C73F1A /* Facebook_Extension.swift */; };
+		3C111BFF23B2657D00C73F1A /* Google_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C111BFE23B2657D00C73F1A /* Google_Extension.swift */; };
+		3C111C0123B26B3000C73F1A /* Image_Downloading .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C111C0023B26B3000C73F1A /* Image_Downloading .swift */; };
 		3C3EBAFA23B0DBEE00E7C09F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBAF923B0DBEE00E7C09F /* Constants.swift */; };
 		3C3EBAFC23B10BF900E7C09F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBAFB23B10BF900E7C09F /* ProfileViewController.swift */; };
 		3C92402A23B142BF00AD8D04 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C92402923B142BE00AD8D04 /* credentials.plist */; };
@@ -28,9 +28,9 @@
 
 /* Begin PBXFileReference section */
 		3542F43019FDFCE27BCA52BD /* Pods-FaceBook Login Integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBook Login Integration.debug.xcconfig"; path = "Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration.debug.xcconfig"; sourceTree = "<group>"; };
-		3C111BFC23B263A600C73F1A /* Facebook Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Facebook Extension.swift"; sourceTree = "<group>"; };
-		3C111BFE23B2657D00C73F1A /* Google Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google Extension.swift"; sourceTree = "<group>"; };
-		3C111C0023B26B3000C73F1A /* Image Downloading .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image Downloading .swift"; sourceTree = "<group>"; };
+		3C111BFC23B263A600C73F1A /* Facebook_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook_Extension.swift; sourceTree = "<group>"; };
+		3C111BFE23B2657D00C73F1A /* Google_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google_Extension.swift; sourceTree = "<group>"; };
+		3C111C0023B26B3000C73F1A /* Image_Downloading .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image_Downloading .swift"; sourceTree = "<group>"; };
 		3C3EBAF923B0DBEE00E7C09F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3C3EBAFB23B10BF900E7C09F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3C92402923B142BE00AD8D04 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 			children = (
 				3CC5237523AFDF3000B237F1 /* ViewController.swift */,
 				3C3EBAFB23B10BF900E7C09F /* ProfileViewController.swift */,
-				3C111BFC23B263A600C73F1A /* Facebook Extension.swift */,
-				3C111BFE23B2657D00C73F1A /* Google Extension.swift */,
-				3C111C0023B26B3000C73F1A /* Image Downloading .swift */,
+				3C111BFC23B263A600C73F1A /* Facebook_Extension.swift */,
+				3C111BFE23B2657D00C73F1A /* Google_Extension.swift */,
+				3C111C0023B26B3000C73F1A /* Image_Downloading .swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -280,15 +280,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C3EBAFC23B10BF900E7C09F /* ProfileViewController.swift in Sources */,
-				3C111BFF23B2657D00C73F1A /* Google Extension.swift in Sources */,
+				3C111BFF23B2657D00C73F1A /* Google_Extension.swift in Sources */,
 				3C3EBAFA23B0DBEE00E7C09F /* Constants.swift in Sources */,
 				3CC5238823B00A7F00B237F1 /* User.swift in Sources */,
 				3C92403023B1470400AD8D04 /* Custom-Button.swift in Sources */,
 				3C92402C23B146E700AD8D04 /* DropSegue.swift in Sources */,
 				3CC5237623AFDF3000B237F1 /* ViewController.swift in Sources */,
 				3CC5237223AFDF3000B237F1 /* AppDelegate.swift in Sources */,
-				3C111C0123B26B3000C73F1A /* Image Downloading .swift in Sources */,
-				3C111BFD23B263A600C73F1A /* Facebook Extension.swift in Sources */,
+				3C111C0123B26B3000C73F1A /* Image_Downloading .swift in Sources */,
+				3C111BFD23B263A600C73F1A /* Facebook_Extension.swift in Sources */,
 				3CC5237423AFDF3000B237F1 /* SceneDelegate.swift in Sources */,
 				3C92402F23B1470400AD8D04 /* Custom-ImageView.swift in Sources */,
 			);

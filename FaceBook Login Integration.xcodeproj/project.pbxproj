@@ -29,6 +29,7 @@
 		3C92402B23B146E700AD8D04 /* DropSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropSegue.swift; sourceTree = "<group>"; };
 		3C92402D23B1470400AD8D04 /* Custom-ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Custom-ImageView.swift"; sourceTree = "<group>"; };
 		3C92402E23B1470400AD8D04 /* Custom-Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Custom-Button.swift"; sourceTree = "<group>"; };
+		3CA3C3D523B3626500A5F09F /* FaceBook Login Integration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FaceBook Login Integration.entitlements"; sourceTree = "<group>"; };
 		3CC5236E23AFDF3000B237F1 /* FaceBook Login Integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceBook Login Integration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC5237123AFDF3000B237F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CC5237323AFDF3000B237F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		3CC5237023AFDF3000B237F1 /* FaceBook Login Integration */ = {
 			isa = PBXGroup;
 			children = (
+				3CA3C3D523B3626500A5F09F /* FaceBook Login Integration.entitlements */,
 				3CC5237123AFDF3000B237F1 /* AppDelegate.swift */,
 				3CC5237323AFDF3000B237F1 /* SceneDelegate.swift */,
 				3CC5238623B00A5300B237F1 /* Model */,
@@ -419,7 +421,9 @@
 			baseConfigurationReference = 3542F43019FDFCE27BCA52BD /* Pods-FaceBook Login Integration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FaceBook Login Integration/FaceBook Login Integration.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 5J6XTP2UZJ;
 				INFOPLIST_FILE = "FaceBook Login Integration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -429,6 +433,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devoders.ahh.FaceBook-Login-Integration";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,7 +444,9 @@
 			baseConfigurationReference = 9770779496B53D387729400F /* Pods-FaceBook Login Integration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FaceBook Login Integration/FaceBook Login Integration.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 5J6XTP2UZJ;
 				INFOPLIST_FILE = "FaceBook Login Integration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -449,6 +456,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devoders.ahh.FaceBook-Login-Integration";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

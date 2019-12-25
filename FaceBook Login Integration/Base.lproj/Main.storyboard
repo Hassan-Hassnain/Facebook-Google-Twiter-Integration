@@ -64,42 +64,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ilt-X3-ArH" customClass="Custom_ImageView" customModule="FaceBook_Login_Integration" customModuleProvider="target">
-                                <rect key="frame" x="164" y="128" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="E8p-eO-eIZ"/>
-                                    <constraint firstAttribute="width" constant="250" id="O1k-xM-tS7"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.26685573629999998" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ilt-X3-ArH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="CLR-5j-FpY"/>
-                            <constraint firstItem="aQy-RO-nKP" firstAttribute="top" secondItem="Ilt-X3-ArH" secondAttribute="bottom" constant="80" id="GPu-1Y-5wI"/>
-                            <constraint firstItem="Ilt-X3-ArH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iof-PM-y3A"/>
                             <constraint firstItem="IUT-Gm-91U" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="LuU-En-WLE"/>
                             <constraint firstItem="IUT-Gm-91U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VFj-gN-aBo"/>
                             <constraint firstItem="aQy-RO-nKP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="WWb-Es-kTd"/>
                             <constraint firstItem="aQy-RO-nKP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iVN-Wb-Hak"/>
                             <constraint firstItem="IUT-Gm-91U" firstAttribute="top" secondItem="aQy-RO-nKP" secondAttribute="bottom" constant="80" id="pj4-Rm-YaK"/>
+                            <constraint firstItem="aQy-RO-nKP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="370" id="wKp-GI-EFY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="e2i-y7-veJ"/>
                     <connections>
+                        <outlet property="facebookLoginButton" destination="aQy-RO-nKP" id="9OQ-Rf-w52"/>
                         <outlet property="googleLoginButton" destination="IUT-Gm-91U" id="T8H-8Q-gI4"/>
-                        <outlet property="imageView" destination="Ilt-X3-ArH" id="llK-XW-blP"/>
                         <segue destination="hsC-O3-Rx0" kind="show" identifier="ProfileView" customClass="DropSegue" customModule="FaceBook_Login_Integration" customModuleProvider="target" id="muA-Ck-9ho"/>
                     </connections>
                 </viewController>
@@ -148,7 +128,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D0S-Ra-EnR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="foM-Xv-Qwg"/>
+                    <navigationItem key="navigationItem" id="foM-Xv-Qwg">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="PYZ-zs-LF2">
+                            <color key="tintColor" red="0.16015365719795227" green="0.31473305821418762" blue="0.93425571918487549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="logOutButton:" destination="hsC-O3-Rx0" id="E56-ai-1sE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="profileImage" destination="hE6-6r-u2Z" id="wRE-iU-izl"/>
                         <outlet property="profileNaem" destination="R7O-ii-dje" id="9Ma-bh-W4g"/>

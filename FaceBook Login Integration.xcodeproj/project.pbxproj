@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C3C5C1523B3759600C70390 /* User_Defaults_Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C5C1423B3759600C70390 /* User_Defaults_Values.swift */; };
 		3C3EBAFC23B10BF900E7C09F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBAFB23B10BF900E7C09F /* ProfileViewController.swift */; };
 		3C92402A23B142BF00AD8D04 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C92402923B142BE00AD8D04 /* credentials.plist */; };
 		3C92402C23B146E700AD8D04 /* DropSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92402B23B146E700AD8D04 /* DropSegue.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		3542F43019FDFCE27BCA52BD /* Pods-FaceBook Login Integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBook Login Integration.debug.xcconfig"; path = "Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration.debug.xcconfig"; sourceTree = "<group>"; };
+		3C3C5C1423B3759600C70390 /* User_Defaults_Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Defaults_Values.swift; sourceTree = "<group>"; };
 		3C3EBAFB23B10BF900E7C09F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3C92402923B142BE00AD8D04 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		3C92402B23B146E700AD8D04 /* DropSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropSegue.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				3CC5238723B00A7F00B237F1 /* User.swift */,
+				3C3C5C1423B3759600C70390 /* User_Defaults_Values.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				3CC5237223AFDF3000B237F1 /* AppDelegate.swift in Sources */,
 				3CC5237423AFDF3000B237F1 /* SceneDelegate.swift in Sources */,
 				3C92402F23B1470400AD8D04 /* Custom-ImageView.swift in Sources */,
+				3C3C5C1523B3759600C70390 /* User_Defaults_Values.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

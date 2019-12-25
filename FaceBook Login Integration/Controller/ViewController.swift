@@ -13,32 +13,27 @@ import GoogleSignIn
 
 class ViewController: UIViewController,GIDSignInDelegate{
     
+    @IBOutlet weak var facebookLoginButton: UIButton!
     @IBOutlet weak var googleLoginButton: UIButton!
-    @IBOutlet weak var imageView: UIImageView!
     
-    var isSeguePending: Int = 0 {
-        didSet{
-            updateSegueState()
+    override func viewWillAppear(_ animated: Bool) {
+        print(" View will Appear in ViewController \(String(describing: UserDefaults.standard.value(forKey: "IS_LOGIN") as? Bool))!")
+        if let status = UserDefaults.standard.value(forKey: "IS_LOGIN") as? Bool{
+            if status {
+                performSegue(withIdentifier: "ProfileView", sender: self)
+            }
         }
+        googleLoginButton.center.x += view.bounds.width
+        googleLoginButton.center.x -= view.bounds.width
     }
-    
-    // var image = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let name = UserDefaults.standard.value(forKey: "NAME") as? String{
-            print(name)
-        }
-        if let imageurl = UserDefaults.standard.value(forKey: "IMAGE_URL") as? String{
-            print(imageurl)
-        }
-        
-        if let status = UserDefaults.standard.value(forKey: "IS_LOGIN") as? Bool{
-            print(status)
-        }
         googleLoginButton.addTarget(self, action: #selector(singInUsingGoogle(_:)), for: .touchUpInside)
-        
+        UIView.animate(withDuration: 1.2) {
+            self.facebookLoginButton.center.x -= self.view.bounds.width
+            self.googleLoginButton.center.x += self.view.bounds.width
+        }
     }
     
     @IBAction func loginWithFacebook(_ sender: Any){
@@ -50,9 +45,8 @@ class ViewController: UIViewController,GIDSignInDelegate{
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.signIn()
     }
-    
+    //MARK: - Facebook Functions
     func updateSegueState () {
-        
         print("isSeguePending state didset performed")
         self.performSegue(withIdentifier: "ProfileView", sender: self)
     }
@@ -69,19 +63,16 @@ class ViewController: UIViewController,GIDSignInDelegate{
                 break
             case .success( _, _, _):
                 
-                print("Access token = \(AccessToken.self)")
+                print("Login Success: Access token = \(AccessToken.self)")
                 self.fetchProfileData()
             }
         }
     }
     
     func fetchProfileData(){
-        
         let connection = GraphRequestConnection()
         connection.add(GraphRequest(graphPath: "/me",
                                     parameters: ["fields":"id, name, first_name, last_name, email"])) {
-                                        
-                                        
                                         httpResponse, result, error   in
                                         if error != nil {
                                             NSLog(error.debugDescription)
@@ -93,15 +84,12 @@ class ViewController: UIViewController,GIDSignInDelegate{
                                             let fbId: String = result["id"],
                                             let name: String = result["name"]
                                         {
-                                            
                                             let url = "https://graph.facebook.com/\(fbId)/picture?type=large"
                                             if let imageUrl = URL(string: url){
                                                 let user = User(id: fbId, email: email, name: name, pictureUrl: imageUrl)
+                                                let userValues = LoginStatus(status: true, name: name, imageUrl: imageUrl, loginSourc: "Facebook")
+                                                self.setLoginStatusValues(userValues: userValues)
                                                 self.performSegue(withIdentifier: "ProfileView", sender: user)
-                                                
-                                                UserDefaults.standard.set(name, forKey: "NAME")
-                                                UserDefaults.standard.set(imageUrl, forKey: "IMAGE_URL")
-                                                UserDefaults.standard.set(true, forKey: "IS_LOGIN")
                                             }
                                         } else {
                                             print("Data fetching fail")
@@ -124,7 +112,6 @@ class ViewController: UIViewController,GIDSignInDelegate{
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
-        
         if let error = error {
             if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
                 print("The user has not signed in before or they have since signed out.")
@@ -133,19 +120,23 @@ class ViewController: UIViewController,GIDSignInDelegate{
             }
             return
         }
-  
         if let name = user.profile.name,
-           let GId = user.userID,
+            let GId = user.userID,
             let email = user.profile.email,
-        let imageUrl = user.profile.imageURL(withDimension: 250){
+            let imageUrl = user.profile.imageURL(withDimension: 250){
             let user = User(id: GId, email: email, name: name, pictureUrl: imageUrl)
+            let userValues = LoginStatus(status: true, name: name, imageUrl: imageUrl, loginSourc: "Google")
+            self.setLoginStatusValues(userValues: userValues)
             self.performSegue(withIdentifier: "ProfileView", sender: user)
         }
     }
+    //MARK: - Helper Functions
     
-    
-    
+    func setLoginStatusValues(userValues: LoginStatus){
+        UserDefaults.standard.set(userValues.status, forKey: "IS_LOGIN")
+        UserDefaults.standard.set(userValues.name, forKey: "NAME")
+        UserDefaults.standard.set(userValues.imageUrl, forKey: "IMAGE_URL")
+        UserDefaults.standard.set(userValues.loginSourc, forKey: "LOGIN_SOURCE")
+        print("UserDefault.standerd values updated")
+    }
 }
-
-
-

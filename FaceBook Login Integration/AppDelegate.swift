@@ -43,5 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return GIDSignIn.sharedInstance().handle(url)
     }
     
+    
+    
 }
 

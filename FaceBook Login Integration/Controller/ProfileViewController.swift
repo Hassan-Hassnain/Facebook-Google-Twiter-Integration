@@ -26,6 +26,10 @@ class ProfileViewController: UIViewController {
         UIView.animate(withDuration: 1.2) {
                    self.profileImage.center.y += self.view.bounds.height
                }
+        
+        self.view.applyGradient(colours: [.yellow, .white, .red], locations: [0.0, 0.5, 1.0])
+        profileNaem.applyGradient(colours: [UIColor.green] )
+        
         if let user = self.user {
             profileNaem.text = user.name
             profileImage.sd_setImage(with: user.pictureUrl, completed: nil)
@@ -68,4 +72,21 @@ class ProfileViewController: UIViewController {
     
 }
 
+
+extension UIView {
+    @discardableResult
+    func applyGradient(colours: [UIColor]) -> CAGradientLayer {
+        return self.applyGradient(colours: colours, locations: nil)
+    }
+
+    @discardableResult
+    func applyGradient(colours: [UIColor], locations: [NSNumber]?) -> CAGradientLayer {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = colours.map { $0.cgColor }
+        gradient.locations = locations
+        self.layer.insertSublayer(gradient, at: 0)
+        return gradient
+    }
+}
 

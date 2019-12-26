@@ -15,6 +15,8 @@ class ViewController: UIViewController,GIDSignInDelegate{
     
     @IBOutlet weak var facebookLoginButton: UIButton!
     @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var googleLoginIcon: UIButton!
+    @IBOutlet weak var socialIconStack: UIStackView!
     
     override func viewWillAppear(_ animated: Bool) {
         print(" View will Appear in ViewController \(String(describing: UserDefaults.standard.value(forKey: "IS_LOGIN") as? Bool))!")
@@ -25,15 +27,14 @@ class ViewController: UIViewController,GIDSignInDelegate{
         }
         googleLoginButton.center.x += view.bounds.width
         googleLoginButton.center.x -= view.bounds.width
+        socialIconStack.center.x  -= view.bounds.width
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         googleLoginButton.addTarget(self, action: #selector(singInUsingGoogle(_:)), for: .touchUpInside)
-        UIView.animate(withDuration: 1.2) {
-            self.facebookLoginButton.center.x -= self.view.bounds.width
-            self.googleLoginButton.center.x += self.view.bounds.width
-        }
+        googleLoginIcon.addTarget(self, action: #selector(singInUsingGoogle(_:)), for: .touchUpInside)
+        animateView()
     }
     
     @IBAction func loginWithFacebook(_ sender: Any){
@@ -138,5 +139,15 @@ class ViewController: UIViewController,GIDSignInDelegate{
         UserDefaults.standard.set(userValues.imageUrl, forKey: "IMAGE_URL")
         UserDefaults.standard.set(userValues.loginSourc, forKey: "LOGIN_SOURCE")
         print("UserDefault.standerd values updated")
+    }
+    func animateView(){
+        UIView.animate(withDuration: 1.2) {
+            self.facebookLoginButton.center.x -= self.view.bounds.width
+            self.googleLoginButton.center.x += self.view.bounds.width
+        }
+        UIView.animate(withDuration: 1.2) {
+            self.socialIconStack.center.x += self.view.bounds.width
+        }
+        self.view.applyGradient(colours: [.yellow, .white, .cyan], locations: [0.0, 0.5, 1.0])
     }
 }

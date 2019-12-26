@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-RO-nKP" customClass="CustomButton" customModule="FaceBook_Login_Integration" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="458" width="331" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-RO-nKP">
+                                <rect key="frame" x="41.5" y="645" width="331" height="50"/>
                                 <color key="backgroundColor" red="0.63160222768783569" green="0.91684526205062866" blue="0.57743781805038452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="OwX-nG-6dm"/>
@@ -42,8 +42,8 @@
                                     <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhK-mH-oGy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUT-Gm-91U" customClass="CustomButton" customModule="FaceBook_Login_Integration" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="588" width="331" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUT-Gm-91U">
+                                <rect key="frame" x="41.5" y="779" width="331" height="50"/>
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8M9-ya-1tK"/>
@@ -64,22 +64,66 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iVE-TA-Ix4">
+                                <rect key="frame" x="25" y="340.5" width="50" height="215"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhE-aF-8f4">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="FDm-HS-bqE"/>
+                                            <constraint firstAttribute="height" constant="50" id="qxX-qP-W6q"/>
+                                        </constraints>
+                                        <state key="normal" image="color+google+media+network+social+icon-1320086080668511532_512"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jL3-KV-W6N">
+                                        <rect key="frame" x="0.0" y="55" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GNx-fF-5K9"/>
+                                            <constraint firstAttribute="width" constant="50" id="pYf-hc-hlC"/>
+                                        </constraints>
+                                        <state key="normal" image="facebook+media+network+share+social+icon-1320086086406420676_512"/>
+                                        <connections>
+                                            <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pII-2U-2xG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jv-uK-P05">
+                                        <rect key="frame" x="0.0" y="110" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="L6Q-ar-JdF"/>
+                                            <constraint firstAttribute="width" constant="50" id="l1T-Am-Rly"/>
+                                        </constraints>
+                                        <state key="normal" image="apple-1320568678372157914_512"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS3-zy-zCN">
+                                        <rect key="frame" x="0.0" y="165" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="82p-m0-Y76"/>
+                                            <constraint firstAttribute="width" constant="50" id="9Q1-iN-Jg9"/>
+                                        </constraints>
+                                        <state key="normal" image="twitter+icon-1320184071992603375_512"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IUT-Gm-91U" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="LuU-En-WLE"/>
                             <constraint firstItem="IUT-Gm-91U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VFj-gN-aBo"/>
+                            <constraint firstItem="iVE-TA-Ix4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WLj-up-xWX"/>
                             <constraint firstItem="aQy-RO-nKP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="WWb-Es-kTd"/>
                             <constraint firstItem="aQy-RO-nKP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iVN-Wb-Hak"/>
-                            <constraint firstItem="IUT-Gm-91U" firstAttribute="top" secondItem="aQy-RO-nKP" secondAttribute="bottom" constant="80" id="pj4-Rm-YaK"/>
-                            <constraint firstItem="aQy-RO-nKP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="370" id="wKp-GI-EFY"/>
+                            <constraint firstItem="IUT-Gm-91U" firstAttribute="top" secondItem="aQy-RO-nKP" secondAttribute="bottom" constant="84" id="pj4-Rm-YaK"/>
+                            <constraint firstItem="aQy-RO-nKP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="557" id="wKp-GI-EFY"/>
+                            <constraint firstItem="iVE-TA-Ix4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="za4-YX-9OD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="e2i-y7-veJ"/>
                     <connections>
                         <outlet property="facebookLoginButton" destination="aQy-RO-nKP" id="9OQ-Rf-w52"/>
-                        <outlet property="googleLoginButton" destination="IUT-Gm-91U" id="T8H-8Q-gI4"/>
+                        <outlet property="googleLoginButton" destination="IUT-Gm-91U" id="pfl-Oc-wfa"/>
+                        <outlet property="googleLoginIcon" destination="VhE-aF-8f4" id="5NY-XE-K1a"/>
+                        <outlet property="socialIconStack" destination="iVE-TA-Ix4" id="4MB-tm-mhE"/>
                         <segue destination="hsC-O3-Rx0" kind="show" identifier="ProfileView" customClass="DropSegue" customModule="FaceBook_Login_Integration" customModuleProvider="target" id="muA-Ck-9ho"/>
                     </connections>
                 </viewController>
@@ -87,7 +131,7 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="80.357142857142847"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="Nhq-62-nJD">
             <objects>
                 <viewController id="hsC-O3-Rx0" customClass="ProfileViewController" customModule="FaceBook_Login_Integration" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,9 +139,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7O-ii-dje">
-                                <rect key="frame" x="41.5" y="488" width="331" height="32"/>
-                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7O-ii-dje">
+                                <rect key="frame" x="41.5" y="488" width="331" height="37"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -128,7 +172,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D0S-Ra-EnR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="foM-Xv-Qwg">
+                    <navigationItem key="navigationItem" title="Profile" id="foM-Xv-Qwg">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="PYZ-zs-LF2">
                             <color key="tintColor" red="0.16015365719795227" green="0.31473305821418762" blue="0.93425571918487549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -143,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpQ-of-A7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1755.072463768116" y="80.357142857142847"/>
+            <point key="canvasLocation" x="1722" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xbq-MC-FEI">
@@ -161,7 +205,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1E-5R-fom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="80.357142857142847"/>
+            <point key="canvasLocation" x="352" y="80"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apple-1320568678372157914_512" width="512" height="512"/>
+        <image name="color+google+media+network+social+icon-1320086080668511532_512" width="512" height="512"/>
+        <image name="facebook+media+network+share+social+icon-1320086086406420676_512" width="512" height="512"/>
+        <image name="twitter+icon-1320184071992603375_512" width="512" height="512"/>
+    </resources>
 </document>

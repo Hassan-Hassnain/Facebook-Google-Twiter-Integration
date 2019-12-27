@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C3C5C1523B3759600C70390 /* User_Defaults_Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C5C1423B3759600C70390 /* User_Defaults_Values.swift */; };
 		3C3EBAFC23B10BF900E7C09F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBAFB23B10BF900E7C09F /* ProfileViewController.swift */; };
+		3C53938423B64CBB00BFE904 /* CloudLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53938323B64CBB00BFE904 /* CloudLocation.swift */; };
 		3C92402A23B142BF00AD8D04 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C92402923B142BE00AD8D04 /* credentials.plist */; };
 		3C92402C23B146E700AD8D04 /* DropSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92402B23B146E700AD8D04 /* DropSegue.swift */; };
 		3C92402F23B1470400AD8D04 /* Custom-ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C92402D23B1470400AD8D04 /* Custom-ImageView.swift */; };
@@ -27,6 +28,7 @@
 		3542F43019FDFCE27BCA52BD /* Pods-FaceBook Login Integration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBook Login Integration.debug.xcconfig"; path = "Target Support Files/Pods-FaceBook Login Integration/Pods-FaceBook Login Integration.debug.xcconfig"; sourceTree = "<group>"; };
 		3C3C5C1423B3759600C70390 /* User_Defaults_Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Defaults_Values.swift; sourceTree = "<group>"; };
 		3C3EBAFB23B10BF900E7C09F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3C53938323B64CBB00BFE904 /* CloudLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudLocation.swift; sourceTree = "<group>"; };
 		3C92402923B142BE00AD8D04 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		3C92402B23B146E700AD8D04 /* DropSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropSegue.swift; sourceTree = "<group>"; };
 		3C92402D23B1470400AD8D04 /* Custom-ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Custom-ImageView.swift"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				3CC5238723B00A7F00B237F1 /* User.swift */,
 				3C3C5C1423B3759600C70390 /* User_Defaults_Values.swift */,
+				3C53938323B64CBB00BFE904 /* CloudLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			files = (
 				3C3EBAFC23B10BF900E7C09F /* ProfileViewController.swift in Sources */,
 				3CC5238823B00A7F00B237F1 /* User.swift in Sources */,
+				3C53938423B64CBB00BFE904 /* CloudLocation.swift in Sources */,
 				3C92403023B1470400AD8D04 /* Custom-Button.swift in Sources */,
 				3C92402C23B146E700AD8D04 /* DropSegue.swift in Sources */,
 				3CC5237623AFDF3000B237F1 /* ViewController.swift in Sources */,
@@ -453,7 +457,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = T898NTACMU;
+				DEVELOPMENT_TEAM = 5J6XTP2UZJ;
 				INFOPLIST_FILE = "FaceBook Login Integration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

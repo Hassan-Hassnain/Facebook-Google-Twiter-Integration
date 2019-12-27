@@ -16,54 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-RO-nKP">
-                                <rect key="frame" x="41.5" y="645" width="331" height="50"/>
-                                <color key="backgroundColor" red="0.63160222768783569" green="0.91684526205062866" blue="0.57743781805038452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="OwX-nG-6dm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="tintColor" red="0.13350942730000001" green="0.29707628489999999" blue="0.32067108150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Facebook Login">
-                                    <color key="titleShadowColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.26685573629999998" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhK-mH-oGy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUT-Gm-91U">
-                                <rect key="frame" x="41.5" y="779" width="331" height="50"/>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8M9-ya-1tK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Google Login">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iVE-TA-Ix4">
                                 <rect key="frame" x="25" y="340.5" width="50" height="215"/>
                                 <subviews>
@@ -107,22 +59,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IUT-Gm-91U" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="LuU-En-WLE"/>
-                            <constraint firstItem="IUT-Gm-91U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VFj-gN-aBo"/>
                             <constraint firstItem="iVE-TA-Ix4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WLj-up-xWX"/>
-                            <constraint firstItem="aQy-RO-nKP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="WWb-Es-kTd"/>
-                            <constraint firstItem="aQy-RO-nKP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iVN-Wb-Hak"/>
-                            <constraint firstItem="IUT-Gm-91U" firstAttribute="top" secondItem="aQy-RO-nKP" secondAttribute="bottom" constant="84" id="pj4-Rm-YaK"/>
-                            <constraint firstItem="aQy-RO-nKP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="557" id="wKp-GI-EFY"/>
                             <constraint firstItem="iVE-TA-Ix4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="za4-YX-9OD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="e2i-y7-veJ"/>
                     <connections>
-                        <outlet property="facebookLoginButton" destination="aQy-RO-nKP" id="9OQ-Rf-w52"/>
-                        <outlet property="googleLoginButton" destination="IUT-Gm-91U" id="pfl-Oc-wfa"/>
-                        <outlet property="googleLoginIcon" destination="VhE-aF-8f4" id="5NY-XE-K1a"/>
+                        <outlet property="googleLoginIcon" destination="VhE-aF-8f4" id="38Z-Qh-8wZ"/>
                         <outlet property="socialIconStack" destination="iVE-TA-Ix4" id="4MB-tm-mhE"/>
                         <segue destination="hsC-O3-Rx0" kind="show" identifier="ProfileView" customClass="DropSegue" customModule="FaceBook_Login_Integration" customModuleProvider="target" id="muA-Ck-9ho"/>
                     </connections>

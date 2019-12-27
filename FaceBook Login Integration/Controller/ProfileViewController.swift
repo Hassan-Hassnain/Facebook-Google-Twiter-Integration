@@ -50,19 +50,16 @@ class ProfileViewController: UIViewController {
         
         UserDefaults.standard.set(false, forKey: "IS_LOGIN")
     }
-    //MARK: - Helping function
+//MARK: - Helping function
     
     
     func userData() -> (Bool,String,URL,String) {
-        
-        print("getUserDefualtValue function called")
         let status = UserDefaults.standard.value(forKey: "IS_LOGIN") as? Bool
         let name = UserDefaults.standard.value(forKey: "NAME") as? String
          let imageUrl = UserDefaults.standard.url(forKey: "IMAGE_URL")
          let source = UserDefaults.standard.value(forKey: "LOGIN_SOURCE") as? String
         
         if let status = status, let name = name, let imageUrl = imageUrl, let source = source{
-             print("This is true part")
             return (status,name,imageUrl,source)
         } else {
             return (false,"",URL(string: ".")!,"")
@@ -72,6 +69,7 @@ class ProfileViewController: UIViewController {
     
 }
 
+//MARK: - UIView Gradient Color
 
 extension UIView {
     @discardableResult
